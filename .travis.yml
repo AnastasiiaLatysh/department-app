@@ -7,3 +7,9 @@ install:
 # command to run tests
 script:
   - pytest
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+after_success:
+  - coveralls
